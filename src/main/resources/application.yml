@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:hsqldb:mem:mydatabase;db_close_on_exit=false
+    driver-class-name: org.hsqldb.jdbc.JDBCDriver
+    username: ssm
+    password: ssm
+    platform: hsqldb
+
+  data:
+    jpa:
+      repositories:
+        enabled: true
+
+logging:
+  level:
+    ROOT: ERROR
+
+server:
+  port: ${appPort:8088}
